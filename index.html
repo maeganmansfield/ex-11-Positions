@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/tjo7pbd.css">
+        <title>Exercise 11 Positioning</title>
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+
+                <h1>CSS Positioning: Drop Down Menu</h1>
+                <p>
+                    <code>posittion: relative</code> and <code>postion: absolute</code>
+                </p>
+            </div>
+                    <nav class="header-nav">
+                        <ul class="wrapper header-nav-list">
+                            <li>
+                                <a href=""class="header-link">Home</a>
+                                
+                            </li>
+                            <li>
+                                <a href=""class="header-link">About</a>  
+                            </li>
+                            <li class="dropdown-trigger">
+                                <a href=""class="header-link">Products</a> 
+                                    <ul class="dropdown">
+                                        <li>
+                                            Widgets
+                                        </li>
+                                        <li>
+                                            Gadgets
+                                        </li>
+                                        <li>
+                                            Gizmos
+                                        </li>
+                                    </ul> 
+                            </li>
+                            <li>
+                                <a href=""class="header-link">Contact</a>    
+                            </li>
+                        </ul>
+                    </nav>
+        </header>
+            <main>
+                <div class="wrapper">
+                    <p>The parent list needs <code>postion: relative</code> so that the child
+                        submenu can be positioned with <code>position: absolute</code> 
+                        absolute relative to it - not relative to the entire page.
+                    </p> 
+                        
+                    <p> The submenu (a nested <code>ul</code> inside one of the <code>li</code> elements)
+                        is hiddenby defult with <code>display: none</code>. When the user hovers 
+                        over the parent list item, the submenu is shown with <code>display: block</code>.
+                    </p>
+                    
+                    <p>
+                        The key concept: <code>posittion: absolute</code> places an element relative to initial-scale
+                        nearest ancestor that has <code>position: relative</code>. Without that ancestor, it positions
+                        relative to the page - which is almost never what you want.
+                    </p>
+          
+                </div>
+            </main>
+     </body>
+
+    </html>
